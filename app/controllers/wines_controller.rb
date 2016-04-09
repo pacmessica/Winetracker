@@ -3,8 +3,17 @@ class WinesController < ApplicationController
 
   # GET /wines
   # GET /wines.json
-  def index
-    @wines = Wine.all
+  def index 
+    if params[:search]
+      wine = Wine.find_by_name(params[:search])
+      if wine.present?
+        @wines = [wine]
+      else
+        @wines = Wine.all.order('created_at DESC')
+      end
+    else
+      @wines = Wine.all.order('created_at DESC')
+    end
   end
 
   # GET /wines/1
@@ -65,10 +74,20 @@ class WinesController < ApplicationController
     end
   end
 
+
+
+  # def search
+  #   @wines = Wine.search(params[:search])
+  # end
+
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_wine
-      @wine = Wine.find(params[:id])
+      @wines = Wine.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
