@@ -21,6 +21,10 @@ class WinesController < ApplicationController
   def edit
   end
 
+  def home
+    create
+  end
+
   # POST /wines
   # POST /wines.json
   def create
