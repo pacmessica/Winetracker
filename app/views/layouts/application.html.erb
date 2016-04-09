@@ -5,12 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="script.js"></script>
 </head>
-
 <body>
+
+
+  <div id='cssmenu'>
+    <ul>
+       <li class='active'><a href='#'>Home</a></li>
+       <li><a href='./page1.html'>Search</a></li>
+       <li><a href='./page2.html'>All My Wines</a></li>
+    </ul>
+  </div>
+
   <header>
     <div class="headertext">
-  		This is the wine header
+      <div class="wine_logo">
+        <%= image_tag( 'mywine1.PNG' ) %>
+      </div>
     </div>
   </header>
 
@@ -18,7 +32,7 @@
 
 
 <footer>
-  <div class="headertext">What do you like?</div>
+  <div class="headertext">Which wines have you tried?</div>
 </footer>
 </body>
 </html>
