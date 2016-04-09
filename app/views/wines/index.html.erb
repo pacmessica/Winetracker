@@ -8,7 +8,6 @@
       <th>Name</th>
       <th>Year</th>
       <th>Origin</th>
-      <th>Type</th>
       <th>Price</th>
       <th>Rating</th>
       <th>Date</th>
@@ -24,15 +23,12 @@
         <td><%= wine.name %></td>
         <td><%= wine.year %></td>
         <td><%= wine.origin %></td>
-        <td><%= wine.type %></td>
         <td><%= wine.price %></td>
         <td><%= wine.rating %></td>
         <td><%= wine.date %></td>
         <td><%= wine.description %></td>
-        <td><%= wine.image %></td>
+        <td><%= image_tag wine.image %></td>
         <td><%= link_to 'Show', wine %></td>
-        <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
-        <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

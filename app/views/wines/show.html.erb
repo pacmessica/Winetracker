@@ -1,49 +1,55 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @wine.name %>
+  <h1><%= @wine.name %></h1>
 </p>
 
 <p>
-  <strong>Year:</strong>
-  <%= @wine.year %>
+  <% if @wine.year != "" %>
+    <strong>Year:</strong>
+    <%= @wine.year %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Origin:</strong>
-  <%= @wine.origin %>
+  <% if @wine.origin != "" %>
+    <strong>Origin:</strong>
+    <%= @wine.origin %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @wine.type %>
+  <% if @wine.price != "" %>
+    <strong>Price:</strong>
+    <%= @wine.price %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @wine.price %>
+  <% if @wine.rating != "" %>
+    <strong>Rating:</strong>
+    <%= @wine.rating %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Rating:</strong>
-  <%= @wine.rating %>
+  <% if @wine.date != "" %>
+    <strong>Date:</strong>
+    <%= @wine.date %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @wine.date %>
+  <% if @wine.description != "" %>
+    <strong>Description:</strong>
+    <%= @wine.description %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @wine.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @wine.image %>
+  <%= image_tag @wine.image %>
 </p>
 
 <%= link_to 'Edit', edit_wine_path(@wine) %> |
+<%= link_to 'Delete', @wine, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', wines_path %>
