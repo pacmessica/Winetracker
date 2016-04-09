@@ -62,11 +62,14 @@
     <strong>Description:</strong>
     <%= @wine.description %>
   <% end %>
+
 </p>
 
+
 <p>
-  <%= image_tag @wine.image %>
+  <%= image_tag @wine.image, html: { width: "10px", height: "10px" } %> 
 </p>
+
 
 <%= link_to 'Edit', edit_wine_path(@wine) %> |
 <%= link_to 'Delete', @wine, method: :delete, data: { confirm: 'Are you sure?' } %> |
