@@ -1,9 +1,31 @@
 body {
-  background-color: #fff;
+  background-color: #AA3939;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+header {
+    height: 150px;
+    background: #801515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.headertext {
+  color:white;
+  font-size:30px;
+  font-family: "Poiret One", sans-serif;
+}
+
+footer {
+    height: 90px;
+    background: #47c9af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p, ol, ul, td {

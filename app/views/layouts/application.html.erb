@@ -6,9 +6,19 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <header>
+    <div class="headertext">
+  		This is the wine header
+    </div>
+  </header>
 
 <%= yield %>
 
+
+<footer>
+  <div class="headertext">What do you like?</div>
+</footer>
 </body>
 </html>
