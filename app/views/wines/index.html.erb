@@ -1,4 +1,27 @@
+<div id='cssmenu'>
+  <ul>
+     <li ><%= link_to 'Home', new_wine_path%></li>
+     <li class='active'><%= link_to 'All my Wines', wines_path %></li>
+  </ul>
+</div>
+
+<header>
+  <div class="headertext">
+    <div class="wine_logo">
+      <%= image_tag( 'mywine1.PNG' ) %>
+    </div>
+  </div>
+</header>
+
+
 <p id="notice"><%= notice %></p>
+
+<%= form_tag(wines_path, :method => "get", id: "search-form") do %>
+<p>
+<%= text_field_tag :search, params[:search], placeholder: "Search Wines" %>
+<%= submit_tag "Search" ,:name => nil%>
+</p>
+<% end %>
 
 <h1>Listing Wines</h1>
 
@@ -27,7 +50,7 @@
         <td><%= wine.rating %></td>
         <td><%= wine.date %></td>
         <td><%= wine.description %></td>
-        <td><%= image_tag wine.image %></td>
+        <td><%= link_to image_tag(wine.image), wine %></td>
         <td><%= link_to 'Show', wine %></td>
       </tr>
     <% end %>
