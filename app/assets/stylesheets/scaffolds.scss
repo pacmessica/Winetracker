@@ -6,6 +6,12 @@ body {
   line-height: 18px;
 }
 
+.wine_image {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
 header {
     height: 250px;
     background: #FFB8B8;
@@ -234,4 +240,8 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+img {
+  width: 80px
 }
