@@ -1,7 +1,7 @@
 
   <div id='cssmenu'>
     <ul>
-       <li><%= link_to 'Home', new_wine_path%></li>
+       <li><%= link_to 'Home', new_wine_path %></li>
        <li><a href='./search.html'>Search</a></li>
        <li><%= link_to 'All my Wines', wines_path %></li>
     </ul>
@@ -67,7 +67,7 @@
 
 
 <p>
-  <%= image_tag @wine.image, html: { width: "10px", height: "10px" } %> 
+  <%= image_tag @wine.image_url, html: { width: "10px", height: "10px" } %>
 </p>
 
 

@@ -44,8 +44,11 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_area :image %>
+    <label>Upload Image</label>
+    <%= image_tag(@wine.image_url) if @wine.image? %>
+    <%= f.file_field :image %>
+    <%= f.label :remote_image_url, "or image URL" %><br />
+    <%= f.text_field :remote_image_url %>
   </div>
   <div class="actions">
     <%= f.submit %>
